@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Info</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/country-page.css" />
+    <link rel="icon" type="favicon" href="icons/earth-globe.png" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h3 class="title">Country Info</h3>
+        <div id="theme" class="theme">
+          <img
+            id="dark-light-mode"
+            class="dark-light-mode"
+            src="icons/moon-1.svg"
+            alt=""
+            width="30px"
+          />
+          <span>Dark Mode</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="home" class="home">
+        <div id="menu" class="menu">
+          <div id="search-box" class="search-box">
+            <img
+              id="search-icon"
+              class="search-icon"
+              src="icons/search-2.svg"
+              alt=""
+            />
+            <input
+              id="search"
+              class="search"
+              type="text"
+              placeholder="Search for a country..."
+            />
+          </div>
+          <div id="filter" class="filter">
+            <div class="selector">
+              <span>Filter By Region</span>
+              <img src="icons/chevron-down.png" alt="" style="width: 20px" />
+            </div>
+            <div class="options">
+              <div class="region" data-value="Asia">Asia</div>
+              <div class="region" data-value="Africa">Africa</div>
+              <div class="region" data-value="Europe">Europe</div>
+              <div class="region" data-value="Americas">America</div>
+              <div class="region" data-value="Oceania">Oceania</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="main"></div>
+      </div>
+      <div class="country-page" id="country-page">
+        <div class="country-information">
+          <div id="back-icon" class="back-icon">
+            <img id="arrow" src="icons/arrow-left-1.svg" alt="" />
+            <span>Back</span>
+          </div>
+          <div class="main-container">
+            <img src="" alt="" id="flag-image" class="flag-image" />
+            <div class="details-part">
+              <h1 id="c-name"></h1>
+              <div class="c-data">
+                <div class="data-1">
+                  <span class="country-data-1"></span
+                  ><span class="country-data-1"></span
+                  ><span class="country-data-1"></span
+                  ><span class="country-data-1"></span
+                  ><span class="country-data-1"></span>
+                </div>
+                <div class="data-2">
+                  <span class="country-data-2"></span
+                  ><span class="country-data-2"></span
+                  ><span class="country-data-2"></span>
+                </div>
+              </div>
+              <div id="border-countries" class="border-countries"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

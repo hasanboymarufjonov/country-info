@@ -1,0 +1,290 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+}
+
+:root {
+  --dm-element: #2b3844;
+  --dm-bg: #202c36;
+  --text: #111517;
+  --input: #858585;
+  --lbg: #fafafa;
+  --bg: #ffffff;
+  --padd-x: 5em;
+  --icon-w: 1.5rem;
+  --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+  --br: 0.5rem;
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  overflow-x: hidden;
+  transition: 0.4s;
+}
+
+strong {
+  font-weight: 800;
+}
+
+@media screen and (max-width: 951px) {
+  :root {
+    --padd-x: 3em;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  :root {
+    --padd-x: 2em;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--lbg);
+  box-shadow: var(--box-shadow);
+  z-index: 2;
+}
+
+.header {
+  padding: 2em var(--padd-x);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 102rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.theme:hover {
+  background-color: var(--lm-input);
+}
+
+.theme span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.moon {
+  width: var(--icon-w);
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .theme span {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .theme span {
+    display: none;
+  }
+}
+
+.home {
+  height: 100vh;
+  padding: 0 var(--padd-x);
+  max-width: 102rem;
+  transition: 0.4s;
+  margin: 0 auto;
+}
+
+#main {
+  margin: 0 auto;
+  padding: 2em 0;
+  width: 100%;
+  max-width: 102rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slided {
+  transform: translateX(-110%);
+}
+
+.country {
+  background: var(--lbg);
+  border-radius: var(--br);
+  overflow: hidden;
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.country:hover {
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+
+.flag-container {
+  height: 12rem;
+}
+
+.flag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.country-details {
+  padding: 2em 1.3em 3em;
+}
+
+.country-name {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+span {
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 896px) {
+  #main {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 573px) {
+  #main {
+    grid-template-columns: min(20rem, 100%);
+  }
+}
+
+.menu {
+  padding: 2em 0;
+  margin: 6.77rem auto 0;
+  width: 100%;
+  max-width: 102rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.search-box {
+  width: min(35rem, 100%);
+  padding: 1.5em 2em;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: var(--lbg);
+  gap: 1em;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--br);
+}
+
+.search-icon {
+  width: var(--icon-w);
+}
+
+.search {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  color: var(--text);
+  background-color: var(--lbg);
+}
+
+.filter {
+  position: relative;
+  width: min(25rem, 100%);
+}
+
+.selector {
+  padding: 1.5em 2em;
+  background-color: var(--lbg);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--br);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selector span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.options {
+  position: absolute;
+  width: 100%;
+  margin-top: 1em;
+  border-radius: var(--br);
+  overflow: hidden;
+  display: none;
+  box-shadow: var(--box-shadow);
+}
+
+.options-opened {
+  display: block;
+}
+
+.region {
+  font-size: 1.2rem;
+  padding: 0.8em;
+  background-color: var(--lbg);
+}
+
+.region:hover {
+  background-color: var(--bg);
+}
+
+@media screen and (max-width: 741px) {
+  .search-box {
+    width: min(25rem, 100%);
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .search-box,
+  .filter {
+    width: 100%;
+  }
+}
+
+main {
+  width: 100%;
+}
